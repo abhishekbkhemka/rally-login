@@ -41,7 +41,6 @@ Amplify.configure({
             path: '/',
             // OPTIONAL - Cookie expiration in days
             expires: 365,
-            sameSite: "Site",
             // OPTIONAL - See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
             // OPTIONAL - Cookie secure flag
             // Either true or false, indicating if the cookie transmission requires a secure protocol (https).
