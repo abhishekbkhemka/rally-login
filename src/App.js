@@ -33,7 +33,7 @@ Amplify.configure({
         // OPTIONAL - Configuration for cookie storage
         // Note: if the secure flag is set to true, then the cookie transmission requires a secure protocol
         cookieStorage: {
-            domain:".rikoouu.com",
+            domain:".netlify.app",
 
             // REQUIRED - Cookie domain (only required if cookieStorage is provided)
             // OPTIONAL - Cookie path
@@ -42,7 +42,7 @@ Amplify.configure({
             expires: 365,
             // OPTIONAL - See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
             // OPTIONAL - Cookie secure flag
-            sameSite: "none",
+            sameSite: "strict",
             // Either true or false, indicating if the cookie transmission requires a secure protocol (https).
             secure: true
         },
