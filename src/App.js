@@ -10,10 +10,8 @@ import ChangePassword from './components/auth/ChangePassword';
 import ChangePasswordConfirm from './components/auth/ChangePasswordConfirm';
 import Welcome from './components/auth/Welcome';
 import LogIn from "../src/components/auth/LogIn";
-import Amplify, { Auth } from 'aws-amplify';
-
-
-// tell Auth to use your storage object
+import Amplify from 'aws-amplify';
+import Auth from '@aws-amplify/auth';
 
 Amplify.configure({
     Auth: {
@@ -35,18 +33,19 @@ Amplify.configure({
         // OPTIONAL - Configuration for cookie storage
         // Note: if the secure flag is set to true, then the cookie transmission requires a secure protocol
         cookieStorage: {
+            domain:".rikoouu.com",
+
             // REQUIRED - Cookie domain (only required if cookieStorage is provided)
             // OPTIONAL - Cookie path
             path: '/',
             // OPTIONAL - Cookie expiration in days
             expires: 365,
-            sameSite: "strict" | "lax",
             // OPTIONAL - See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
             // OPTIONAL - Cookie secure flag
+            sameSite: "none",
             // Either true or false, indicating if the cookie transmission requires a secure protocol (https).
             secure: true
         },
-
 
 
     }
